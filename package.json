@@ -1,6 +1,6 @@
 {
   "name": "compose-express-app",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Creates a Typescript powered express app",
   "main": "index.js",
   "bin": "./bin/cli.js",
