@@ -14,11 +14,11 @@ const runCmd = cmd => {
 }
 
 const dirName = process.argv[2];
-const repoUrl = 'https://github.com/harshalslimaye/express-typescript-boilerplate.git';
+const repoUrl = 'https://github.com/wesleytodd/create-express-app.git';
 const gitCheckoutCmd = `git clone ${repoUrl} ${dirName}`;
 const installDepsCmd = `cd ${dirName} && npm install`;
 
-console.log(`Cloning repository with name ${dirName}`);
+console.log(`Cloning repository...`);
 const isCheckedOut = runCmd(gitCheckoutCmd);
 if (!isCheckedOut) process.exit(-1);
 
