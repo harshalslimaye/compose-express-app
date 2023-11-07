@@ -14,7 +14,7 @@ const runCmd = cmd => {
 }
 
 const dirName = process.argv[2];
-const repoUrl = 'https://github.com/wesleytodd/create-express-app.git';
+const repoUrl = 'https://github.com/harshalslimaye/compose-express-app.git';
 const gitCheckoutCmd = `git clone ${repoUrl} ${dirName}`;
 const installDepsCmd = `cd ${dirName} && npm install`;
 
