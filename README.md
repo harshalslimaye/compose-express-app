@@ -18,7 +18,7 @@ A minimalistic boilerplate for building Express.js applications using TypeScript
 # Installation
 To create a express app:
 ```node
-npx create-react-app my-app
+npx compose-express-app my-app
 cd my-app
 npm start
 ```
