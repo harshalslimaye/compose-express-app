@@ -10,9 +10,10 @@
     "generator"
   ],
   "scripts": {
-    "build": "npx tsc",
-    "start": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\"",
-    "serve": "node dist/index.js",
+    "build": "webpack --mode production",
+    "dev": "webpack --watch",
+    "serve": "nodemon --watch dist --exec \"node dist/bundle.js\"",
+    "start": "concurrently \"npm run dev\" \"npm run serve\"",
     "coverage": "jest --coverage",
     "test": "jest --watch"
   },
@@ -20,7 +21,7 @@
   "license": "MIT",
   "dependencies": {
     "cors": "2.8.5",
-    "dotenv": "16.3.1",
+    "dotenv": "16.4.5",
     "express": "4.18.2",
     "morgan": "1.10.0"
   },
@@ -40,6 +41,10 @@
     "nodemon": "3.0.1",
     "supertest": "6.3.3",
     "ts-jest": "29.1.1",
-    "typescript": "5.2.2"
+    "ts-loader": "9.5.1",
+    "typescript": "5.2.2",
+    "webpack": "5.92.1",
+    "webpack-cli": "5.1.4",
+    "webpack-node-externals": "3.0.0"
   }
 }

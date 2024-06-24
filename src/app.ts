@@ -1,6 +1,9 @@
 import express, { Express, Request, Response } from 'express';
 import cors from 'cors';
 import morgon from 'morgan';
+import * as dotenv from 'dotenv';
+
+dotenv.config();
 
 const app: Express = express();
 const morganFormat = process.env.MORGON ?? 'short';
@@ -11,7 +14,7 @@ app.use(morgon(morganFormat));
 
 app.get('/', (req: Request, res: Response) => {
   res.status(200).json({
-    value: 'hello world!'
+    value: 'hello express!'
   });
 });
 
